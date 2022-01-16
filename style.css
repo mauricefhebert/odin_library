@@ -1,0 +1,98 @@
+:root {
+  --background-body: #edc7b7;
+  --background-card: #eee2dc;
+  --text-card: #000000;
+  --border-card: #123c69;
+  --delete-btn: #ac3b61;
+}
+
+body {
+  background-color: var(--background-body);
+}
+
+/* Navbar */
+/* Book Management Section */
+.book-management-section {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+/* Card Style */
+.row {
+  justify-content: space-between;
+}
+.card {
+  width: 30%;
+  background-color: var(--background-card);
+  border: var(--border-card) 2px solid;
+  color: var(--text-card);
+  font-size: 1.25rem;
+}
+.list-group-item {
+  background-color: var(--background-card);
+}
+.card-button {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 10px 0;
+}
+
+/* Button */
+.btn-primary {
+  background-color: var(--border-card);
+}
+.btn-danger {
+  background-color: var(--delete-btn);
+}
+.btn-success {
+}
+/* book form */
+.book-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-width: 40%;
+  padding: 80px;
+  background-color: var(--background-body);
+}
+.book-form h3 {
+  text-align: center;
+}
+.book-form label {
+  font-weight: bold;
+}
+.book-form input,
+.book-form select {
+  border: 1px solid black;
+  border-radius: 2px;
+  min-width: 80%;
+}
+.form-btn {
+  text-align: center;
+}
+/* Utilities */
+.overlay {
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hidden {
+  display: none;
+}
+/* Media Query */
+@media (max-width: 768px) {
+  .row {
+    justify-content: initial;
+    margin: auto 10px;
+  }
+  .card {
+    width: 100%;
+  }
+}

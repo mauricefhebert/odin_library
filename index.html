@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <!-- Bootstrap Script -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <!-- My CSS -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- My Script -->
+    <script src="./javascript.js" defer></script>
+    <title>Library</title>
+  </head>
+  <body>
+      <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">My Library</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Book</a>
+              </li>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+    </nav>
+      <!-- Main section -->
+      <div class="container book-management-section">
+          <button class="add-new-book-btn btn btn-primary">Add a new book</button>
+      </div>
+      <!-- Start of container -->
+      <div class="container">
+          <!-- Start of card groupd -->
+          <div class="book-container row row-cols-1 row-cols-md-3 g-5">
+            <div
+            id="test-div"
+            data-first-name="Kyle"
+            data-last-name="Cook"
+            data-active
+          ></div>
+          </div>
+          <!-- End of container -->
+      </div>
+      <!-- This is the form to add a new book -->
+      <div class="overlay hidden">
+          <form class="book-form hidden" action="">
+              <h3>Add a new Book</h3>
+              <label for="title">Title</label>
+              <input type="text" name="title" id="title">
+              <label for="author">Author</label>
+              <input type="text" name="author" id="author">
+              <label for="page">Number of pages</label>
+              <input type="number" name="page" id="page">
+              <label for="read">Did your read it?</label>
+              <select name="read" id="read">
+                  <option value="Read">Yes I've read it</option>
+                  <option value="Not read yet">No i haven't read it yet</option>
+              </select>
+              <div class="form-btn">
+                <button class="form-confirm-btn btn btn-primary">Confirm</button>
+                <button class="form-cancel-btn btn btn-danger">Cancel</button>
+              </div>
+          </form>
+      </div>
+  </body>
+</html>
