@@ -2,7 +2,6 @@
 //
 //This is a array of book Object this array contains all the book created
 let myLibrary = [];
-
 //This is a Book constructor to create Book Object
 function Book(title, author, page, read) {
   this.title = title;
@@ -16,7 +15,8 @@ Book.prototype.info = function () {
 };
 
 //This function allow me to add book to the myLibrary Array each time a new book is called it will call the displayBook function to display it automatiquely
-document.querySelector(".form-confirm-btn").addEventListener("click", (e) => {
+document.querySelector(".form-confirm-btn").addEventListener("click", addBookToLibrary);
+function addBookToLibrary(e) {
   e.preventDefault();
   const title = document.getElementById("title").value;
   const author = document.getElementById("author").value;
@@ -26,7 +26,7 @@ document.querySelector(".form-confirm-btn").addEventListener("click", (e) => {
   myLibrary.push(createBook);
   document.querySelector(".book-form").reset();
   displayBook();
-});
+}
 
 //This function display the book on the page by looping trought myLibrary Array
 function displayBook() {
