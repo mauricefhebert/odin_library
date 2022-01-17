@@ -59,7 +59,6 @@ function displayBook() {
           </ul>
           <div class="card-button">
               <button class="book-read-btn btn btn-primary">Read</button>
-              <button class="btn btn-success">Edit</button>
               <button class="book-delete-btn btn btn-danger">Delete</button>
           </div>
         </div>`;
