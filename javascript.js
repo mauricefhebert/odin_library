@@ -40,6 +40,7 @@ function addBookToLibrary(e) {
   e.preventDefault();
   myLibrary.push(createBook());
   bookForm.reset();
+  toggleOverlayAndForm();
   displayBook();
 }
 formConfirmBtn.addEventListener("click", addBookToLibrary);
