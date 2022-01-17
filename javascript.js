@@ -98,8 +98,7 @@ Book.prototype.toggleRead = function () {
 /**********************************************************************************************/
 //Form Manager
 /**********************************************************************************************/
-function toggleOverlayAndForm(e) {
-  e.preventDefault();
+function toggleOverlayAndForm() {
   overlay.classList.toggle("hidden");
   bookForm.classList.toggle("hidden");
 }
