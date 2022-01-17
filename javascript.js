@@ -36,8 +36,7 @@ function createBook() {
   return book;
 }
 
-function addBookToLibrary(e) {
-  e.preventDefault();
+function addBookToLibrary() {
   myLibrary.push(createBook());
   bookForm.reset();
   toggleOverlayAndForm();
