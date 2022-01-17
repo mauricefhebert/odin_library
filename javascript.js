@@ -78,8 +78,16 @@ function addEvent() {
   document.querySelectorAll(".book-delete-btn").forEach((btn) => {
     btn.addEventListener("click", deleteBook, false);
   });
-  document.querySelectorAll(".book-read-btn").forEach((btn) => {});
+  //Function to toggle the read status
+  document.querySelectorAll(".book-read-btn").forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      const bookIndex = e.currentTarget.closest(".card").dataset.id;
+      myLibrary[bookIndex].toggleRead();
+      displayBook();
+    });
+  });
 }
+
 /**********************************************************************************************/
 //None Static Method
 /**********************************************************************************************/
