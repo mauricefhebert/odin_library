@@ -36,9 +36,11 @@ function createBook() {
   return book;
 }
 
-function addBookToLibrary() {
+function addBookToLibrary(e) {
+  e.preventDefault();
   myLibrary.push(createBook());
   bookForm.reset();
+  displayBook();
 }
 formConfirmBtn.addEventListener("click", addBookToLibrary);
 
