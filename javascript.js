@@ -36,10 +36,10 @@ function createBook() {
   return book;
 }
 
-function addBookToLibrary() {
+function addBookToLibrary(e) {
+  e.preventDefault();
   myLibrary.push(createBook());
   bookForm.reset();
-  toggleOverlayAndForm();
   displayBook();
 }
 formConfirmBtn.addEventListener("click", addBookToLibrary);
@@ -73,6 +73,8 @@ function deleteBook(e) {
   myLibrary.splice(bookIndex, 1);
   displayBook();
 }
+
+//This function is used to add the event listener when a new book is created
 function addEvent() {
   document.querySelectorAll(".book-delete-btn").forEach((btn) => {
     btn.addEventListener("click", deleteBook, false);
@@ -96,7 +98,8 @@ Book.prototype.toggleRead = function () {
 /**********************************************************************************************/
 //Form Manager
 /**********************************************************************************************/
-function toggleOverlayAndForm() {
+function toggleOverlayAndForm(e) {
+  e.preventDefault();
   overlay.classList.toggle("hidden");
   bookForm.classList.toggle("hidden");
 }
