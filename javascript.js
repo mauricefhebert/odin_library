@@ -41,6 +41,8 @@ function addBookToLibrary(e) {
   myLibrary.push(createBook());
   bookForm.reset();
   displayBook();
+  bookForm.classList.add("hidden");
+  overlay.classList.add("hidden");
 }
 formConfirmBtn.addEventListener("click", addBookToLibrary);
 
